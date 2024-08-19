@@ -1,0 +1,225 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+
+*/
+
+/* goals: use classes, flexbox, background-image, color palette */
+/* stretch goals: make about hometown, use diff palette, add google font, use hover, new section */
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    color: #1D3557;
+    background-color: #457B9D;
+}
+
+img {
+    width: 100px;
+}
+
+h3 {
+    font-size: 24px;
+    padding: 25px;
+}
+
+/* hero section */
+#hero {
+    background-image: url(images/vista.png);
+    background-position: cover;
+    height: 343px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.city-title {
+    color: #F1FAEE;
+    background-color: #1D3557;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 32px;
+    margin: 0;
+}
+
+.city-desc {
+    color: #F1FAEE;
+    background: #457B9D;
+    padding: 10px 20px;
+    border-radius: 10px;
+    max-width: 355px;
+    margin-top: 10px;
+}
+
+/* summary section */
+
+#summary {
+    background-color: #1D3557;
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F1FAEE;
+    height: 500px;
+}
+
+/* summary left column */
+
+.city-card {
+    width: 50%;
+    height: 100%;
+    margin: 0 50px;
+    padding-top: 100px;
+}
+
+.city-img {
+    object-fit: cover;
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+}
+
+.city-img:hover {
+    box-shadow: 0 0 15px #F1FAEE;
+}
+
+#city {
+    padding: 5px 10px;
+    color: #F1FAEE;
+    font-size: 24px;
+}
+
+/* summary right column */
+
+.side-card {
+    line-height: 35px;
+    width: 50%;
+    height: 85%;
+    text-align: left;
+    margin-right: 50px;
+}
+
+.highlight {
+    background-color: #F1FAEE;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+    color: #457B9D;
+}
+
+/* makes side card scroll when section text overflows */
+@media screen and (max-width: 1007px) and (min-width: 732px) {
+    .side-card {
+        overflow: scroll;
+        overflow-x: hidden;
+        scroll-snap-align: start;
+    }
+}
+
+/* activity section */
+
+a {
+    text-decoration: none;
+    color: #1D3557;
+}
+
+#activities {
+    background-color: #F1FAEE;
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+}
+
+.section-img {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.activity-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 732px) {
+    /* stacks activities after they start hitting each other */
+    .activity-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    /* stacks summary columns */
+    #summary {
+        flex-direction: column;
+        height: 100%;
+    }
+    
+    .city-card {
+        width: 80%;
+        padding-top: 50px;
+    }
+    
+    .side-card {
+        width: 80%;
+        padding-left: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+.activity {
+    width: 200px;
+    padding: 10px;
+}
+
+.activity:hover {
+    box-shadow: 0 0 15px #1D3557;
+    border-radius: 15px;
+}
+
+/* guide section */
+
+#guide {
+    background-color: #A8DADC;
+    max-width: 400px;
+    margin: 50px auto;
+    border-bottom: 5px solid #1D3557;
+    border-radius: 10px;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 15px;
+    
+}
+
+/* stacks guide card items */
+@media screen and (max-width: 430px) {
+    #guide {
+        flex-direction: column;
+    }
+}
+
+.guide-img {
+    width: 180px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.guide-img:hover {
+    box-shadow: 0 0 15px #1D3557;
+}
+
+#guide p {
+    font-style: italic;
+    line-height: 20px;
+}
